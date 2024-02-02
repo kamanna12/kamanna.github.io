@@ -1,0 +1,27 @@
+body{
+    background-color: #B6D0E2;
+    text-align: center;
+    color: rgb(28, 36, 78);
+    font-family: Helvetica; 
+
+}
+a{
+    color: #a82c2c;
+    text-decoration: line;
+}
+
+a:hover{
+    color: #a8662c;
+    text-decoration: center;
+}
+
+
+main{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
