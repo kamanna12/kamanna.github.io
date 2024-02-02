@@ -1,18 +1,18 @@
 body{
-    background-color: #B6D0E2;
+    background-color: #b6e2d5;
     text-align: center;
-    color: rgb(28, 36, 78);
+    color: #217059;
     font-family: Helvetica; 
 
 }
 a{
-    color: #a82c2c;
+    color: #547c39;
     text-align: center;
     text-decoration: line;
 }
 
 a:hover{
-    color: #a8662c;
+    color: #16625b;
     text-decoration: center;
 }
 
