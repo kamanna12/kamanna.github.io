@@ -76,7 +76,7 @@ form {
 .figure-caption {
     margin-right: 740px; /* Adjust the margin as needed */
 }
-header {
+header, footer {
     background-color: #71b8ad;
     color: #285c5c;
     text-align: center;
