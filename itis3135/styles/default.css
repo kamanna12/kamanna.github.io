@@ -31,7 +31,7 @@ li{
     text-align: justify;
 }
 table, th, td {
-    border:#145851 2px solid;
+    border: #145851 2px solid;
     text-decoration: center;
     text-align: left;
 }
@@ -49,12 +49,13 @@ td {
 table {
     color: rgb(13, 75, 13);
 }
-table td.expand {
-    width: 1000%
-}
+
 ol.center-list{
     display: table;
     margin-left: auto;
     margin-right: auto;
     list-style-position: inside;
+}
+th { 
+    font-weight: normal; 
 }
