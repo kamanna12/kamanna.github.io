@@ -73,3 +73,6 @@ form {
     text-align: center;
 }
 
+.figure-caption {
+    margin-right: 740px; /* Adjust the margin as needed */
+}
