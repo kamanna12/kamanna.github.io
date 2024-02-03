@@ -40,15 +40,15 @@ div.container {
     text-align: center;
 }
 table {
-    table-layout: fixed ;
-    width: 120% ;
+    table-layout: fixed;
+    width: 120%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the table */
+    color: rgb(13, 75, 13);
 }
 td {
     width: 25% ;
 }
-table {
-    color: rgb(13, 75, 13);
-}
+
 
 ol.center-list{
     display: table;
