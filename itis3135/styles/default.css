@@ -59,3 +59,14 @@ ol.center-list{
 th { 
     font-weight: normal; 
 }
+
+
+
+form {
+    border: 2px solid #333; /* Set border color and width */
+    padding: 20px; /* Optional: Add padding inside the border */
+    max-width: 700px; /* Optional: Set a maximum width for the form */
+    margin: auto; /* Optional: Center the form on the page */
+}
+
+
