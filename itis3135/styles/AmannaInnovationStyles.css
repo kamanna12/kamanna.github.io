@@ -1,12 +1,16 @@
 body{
     background-color: #d1c5ac;
     text-align: center;
-    color: rgb(28, 36, 78);
+    color: rgb(78, 39, 28);
     font-family: Helvetica; 
 
 }
 a{
-    color: #0a4650;
+    color: #500a0a;
     text-align: center;
     text-decoration: line;
+}
+a:hover{
+    color: #b80f0f;
+    text-decoration: center;
 }
