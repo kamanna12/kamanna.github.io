@@ -41,7 +41,7 @@ div.container {
 }
 table {
     table-layout: fixed ;
-    width: 100% ;
+    width: 120% ;
 }
 td {
     width: 25% ;
@@ -65,8 +65,10 @@ th {
 form {
     border: 2px solid #333; /* Set border color and width */
     padding: 20px; /* Optional: Add padding inside the border */
-    max-width: 700px; /* Optional: Set a maximum width for the form */
-    margin: auto; /* Optional: Center the form on the page */
+    max-width: 600px; /* Optional: Set a maximum width for the form */
+    margin: 0 auto; /* Optional: Center the form on the page */
 }
 
-
+.center-wrapper {
+    text-align: center;
+}
