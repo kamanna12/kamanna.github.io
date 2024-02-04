@@ -82,11 +82,22 @@ header, footer {
     text-align: center;
     padding: 1em;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #63a298;
+    padding: 0.5em;
+}
+
 nav a {
-    color: rgb(39, 60, 59);
+    color: #2c4743;
     text-decoration: none;
     padding: 1em;
     margin: 0 0.5em;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #1e7e7b;
 }
