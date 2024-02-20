@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>Kevin Amanna's Killer Anaconda $$ ITIS 3135</h1>
+<link rel="stylesheet" href="styles/default.css">
+<script defer>
+    // Function to display current date and time
+    function displayDateTime() {
+        const currentDate = new Date();
+        const formattedDateTime = currentDate.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
+        document.getElementById('currentDateTime').textContent = `Today is ${formattedDateTime}`;
+    }
+
+    // Function to submit user input and display greeting
+    function submitUserInput() {
+        const userName = document.getElementById('userName').value;
+        const userFeeling = document.getElementById('userFeeling').value;
+
+        document.getElementById('greetingMessage').textContent = `The Animal Fun Company welcomes you, ${userName}! We're glad you are doing ${userFeeling}!`;
+    }
+
+    // Function: "Roar like a Lion"
+    function function1() {
+        alert("Roar! 🦁");
+    }
+
+    // Function: "Jump like a Kangaroo"
+    function function2() {
+        alert("Boing! Boing! 🦘");
+    }
+
+    // Function: "Waddle like a Penguin"
+    function function3() {
+        alert("Waddle, waddle! 🐧");
+    }
+
+    // Function: "Squeak like a Mouse"
+    function function4() {
+        alert("Squeak! 🐭");
+    }
+
+    // Function: "Dance like a Monkey"
+    function function5() {
+        alert("Shake that tail! 🐒💃");
+    }
+
+    // Initialize the page with the current date and time
+    displayDateTime();
+</script>
+</head>
+<body>
+<header>
+    <h1>Kevin Amanna's Killer Anaconda || ITIS 3135 || INTRODUCTION</h1>
+    <nav>
+        <a href="./">Home</a>
+        ||
+        <a href="introduction.html">Introduction</a>
+        ||
+        <a href="contract.html">Contract</a>
+        ||
+        <a href="tables.html">Tables</a>
+        ||
+        <a href="forms.html">Forms</a>
+        ||
+        <a href="website_evaluations.html">Website Evaluation</a>
+        ||
+        <a href="firstsc1ripts.html">firstscripts</a>
+
+        
+
+    </nav>
+    <nav>
+        ||
+        <a href="CRAPP1Y.html">CRAPPY</a>
+    </nav>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>firstscripts</h1>
+
+        <!-- Display the time, day of the week, and date -->
+        <h3 id="dateTime"></h3>
+
+        <!-- User input form -->
+        <form id="userForm">
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" required>
+
+            <label for="userFeeling">How are you feeling?</label>
+            <input type="text" id="userFeeling" required>
+
+            <label for="userNumber">Enter your favorite number (0 to 10):</label>
+            <input type="number" id="userNumber" min="0" max="10" required>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <!-- Greeting and information display -->
+        <h3 id="greeting"></h3>
+
+        <!-- Animal Brand Company Functions -->
+        <button onclick="function1()">Provide an Insult</button>
+        <button onclick="function2()">Calculate Tax</button>
+        <button onclick="function3()">Calculate Total Price</button>
+        <button onclick="function4()">Calculate Sum</button>
+        <button onclick="function5()">Provide a Joke</button>
+    </main>
+
+    <!-- Common Footer -->
+    <footer>
+        <nav>
+        <a href="https://webpages.charlotte.edu/kamanna/">Charlotte.edu</a>
+        ||
+        <a href="https://github.com/kamanna12/kamanna1.github.io">Github</a>
+        ||
+        <a href="https://kamanna12.github.io/itis3135">Github.io</a>
+        ||
+        <a href="https://www.freecodecamp.org/Kamanna">FreeCodeCamp</a>
+        ||
+        <a href="https://www.codecademy.com/profiles/kamanna">Codeacademy</a>
+        ||
+        <a href="https://www.linkedin.com/in/kevin-amanna-ab4351252/">Linkedin</a>
+    
+        </nav>
+        <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2023</p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html" style="text-decoration: none;">
+            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css" style="text-decoration: none;">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+        </a>
+        
+    </footer>
+    
+    <script>
+    
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    
+        </script>
+        </body>
+    
+    </html>
