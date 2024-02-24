@@ -5,20 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kevin Amanna's Killer Anaconda || ITIS3135 firstscripts</title>
 <link rel="stylesheet" href="styles/default.css">
-<script defer>
-    // Function to display current date and time
+<style>
+    /* Add this style to specifically target buttons in firstscripts.html */
+    main button {
+        padding: 10px;
+        margin: 5px;
+        width: 150px;
+    }
+</style>
+<script>
+    window.onload = function() {
+        displayDateTime();
+    }
+
     function displayDateTime() {
         const currentDate = new Date();
         const formattedDateTime = currentDate.toLocaleString('en-US', {
             hour: 'numeric',
             minute: 'numeric',
+            hour12: true,
             weekday: 'long',
             day: 'numeric',
             month: 'long',
             year: 'numeric'
         });
 
-        document.getElementById('currentDateTime').textContent = `Today is ${formattedDateTime}`;
+        const mainElement = document.querySelector('main');
+        const headerElement = document.createElement('h3');
+        headerElement.textContent = `Today is ${formattedDateTime}`;
+        mainElement.insertAdjacentElement('afterbegin', headerElement);
     }
 
     // Function to submit user input and display greeting
@@ -26,36 +41,48 @@
         const userName = document.getElementById('userName').value;
         const userFeeling = document.getElementById('userFeeling').value;
 
-        document.getElementById('greetingMessage').textContent = `The Animal Fun Company welcomes you, ${userName}! We're glad you are doing ${userFeeling}!`;
+        document.getElementById('greeting').textContent = `The AmannaInnovation Incorporated welcomes you, ${userName}! We're glad you are doing ${userFeeling}!`;
     }
 
-    // Function: "Roar like a Lion"
+    function submitFavoriteNumber() {
+        const favoriteNumber = Math.round(Math.abs(document.getElementById('favoriteNumber').value));
+
+        const polygonNames = ["Circle", 'Digon', 'Triangle', 'Quadrilateral', 'Pentagon', 'Hexagon', 'Heptagon', 'Octagon', 'Nonagon', 'Decagon', 'Hendecagon'];
+        const polygonName = polygonNames[favoriteNumber - 1] || 'Unknown';
+
+        alert(`A polygon with ${favoriteNumber} sides is called a ${polygonName}.`);
+    }
+
     function function1() {
-        alert("Your website looks ugly!");
+        var vehicle_promotion = ["Free Tire Rotation", "Free Oil Changes", "0% APR", "$500 OFF for Veterans", "$500 OFF for University Graduates"];
+        var randomIndex = Math.floor(Math.random() * vehicle_promotion.length);
+        alert(vehicle_promotion[randomIndex]);
     }
-
-    // Function: "Jump like a Kangaroo"
+    
     function function2() {
-        alert("Sedan");
+        var vehicles = ["Sedan", "SUV", "Pickup Truck", "Car"];
+        var randomIndex = Math.floor(Math.random() * vehicles.length);
+        alert(vehicles[randomIndex]);
     }
+    
 
-    // Function: "Waddle like a Penguin"
     function function3() {
-        alert("2019");
+        var vehicle_year = ["2019", "2020", "2021", "2022","2023","2024"];
+        var randomIndex = Math.floor(Math.random() * vehicle_year.length);
+        alert(vehicle_year[randomIndex]);
     }
 
-    // Function: "Squeak like a Mouse"
     function function4() {
-        alert("Honda Civic");
+        var vehicle_model = ["Honda Civic", "Honda Accord", "Tesla Model 3", "Toyota Camry","Ford F-150","Ford Mustang"];
+        var randomIndex = Math.floor(Math.random() * vehicle_model.length);
+        alert(vehicle_model[randomIndex]);
     }
 
-    // Function: "Dance like a Monkey"
     function function5() {
-        alert("$19,800");
+        var vehicle_price = ["$20,000", "$25,000", "$30,000", "$35,000","$40,000","$45,000"];
+        var randomIndex = Math.floor(Math.random() * vehicle_price.length);
+        alert(vehicle_price[randomIndex]);
     }
-
-    // Initialize the page with the current date and time
-    displayDateTime();
 </script>
 </head>
 <body>
@@ -75,9 +102,6 @@
         <a href="website_evaluations.html">Website Evaluation</a>
         ||
         <a href="firstscripts.html">firstscripts</a>
-
-        
-
     </nav>
     <nav>
         ||
@@ -85,70 +109,74 @@
     </nav>
 </header>
 
-    <!-- Main Content -->
-    <main>
-        <h1>firstscripts</h1>
+<!-- Main Content -->
+<main>
+    <h1>firstscripts</h1>
 
-        <!-- Display the time, day of the week, and date -->
-        <h3 id="dateTime"></h3>
+    <!-- User input form -->
+    <form id="userForm">
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName" required>
+        <br>
 
-        <!-- User input form -->
-        <form id="userForm">
-            <label for="userName">Your Name:</label>
-            <input type="text" id="userName" required>
+        <label for="userFeeling">How are you feeling?</label>
+        <input type="text" id="userFeeling" required>
+        <br>
 
-            <label for="userFeeling">How are you feeling?</label>
-            <input type="text" id="userFeeling" required>
+        <button type="button" onclick="submitUserInput()" style="padding: 5px; margin: 5px; width: 100px;">Submit</button>
+        <br>
 
-            <label for="userNumber">Enter your favorite number (0 to 10):</label>
-            <input type="number" id="userNumber" min="0" max="10" required>
+        <label for="favoriteNumber">Your Favorite Number (0-10):</label>
+        <input type="number" id="favoriteNumber" min="0" max="10" required>
+        <button type="button" onclick="submitFavoriteNumber()" style="padding: 5px; margin: 5px; width: 150px;">Submit Number</button>
+        <br>
 
-            <button type="button" onclick="submitForm()">Submit</button>
-        </form>
+        <button type="reset" style="background-color: red; color: white; padding: 5px; margin: 5px; width: 100px;">Reset</button>
+    </form>
 
-        <!-- Greeting and information display -->
-        <h3 id="greeting"></h3>
+    <!-- Greeting and information display -->
+    <h3 id="greeting"></h3>
 
-        <!-- Animal Brand Company Functions -->
-        <button onclick="function1()">Provide an Insult</button>
-        <button onclick="function2()">Car Type Generator</button>
-        <button onclick="function3()">Car Year Generator</button>
-        <button onclick="function4()">Car Model Generator</button>
-        <button onclick="function5()">Car Price Generator</button>
-    </main>
+    <!-- Animal Brand Company Functions -->
+    <button onclick="function1()">Promotion Generator</button>
+    <button onclick="function2()">Car Type Generator</button>
+    <button onclick="function3()">Car Year Generator</button>
+    <button onclick="function4()">Car Model Generator</button>
+    <button onclick="function5()">Car Price Generator</button>
+</main>
 
-    <!-- Common Footer -->
-    <footer>
-        <nav>
-        <a href="https://webpages.charlotte.edu/kamanna/">Charlotte.edu</a>
-        ||
-        <a href="https://github.com/kamanna12/kamanna1.github.io">Github</a>
-        ||
-        <a href="https://kamanna12.github.io/itis3135">Github.io</a>
-        ||
-        <a href="https://www.freecodecamp.org/Kamanna">FreeCodeCamp</a>
-        ||
-        <a href="https://www.codecademy.com/profiles/kamanna">Codeacademy</a>
-        ||
-        <a href="https://www.linkedin.com/in/kevin-amanna-ab4351252/">Linkedin</a>
+<!-- Common Footer -->
+<footer>
+    <nav>
+    <a href="https://webpages.charlotte.edu/kamanna/">Charlotte.edu</a>
+    ||
+    <a href="https://github.com/kamanna12/kamanna1.github.io">Github</a>
+    ||
+    <a href="https://kamanna12.github.io/itis3135">Github.io</a>
+    ||
+    <a href="https://www.freecodecamp.org/Kamanna">FreeCodeCamp</a>
+    ||
+    <a href="https://www.codecademy.com/profiles/kamanna">Codeacademy</a>
+    ||
+    <a href="https://www.linkedin.com/in/kevin-amanna-ab4351252/">Linkedin</a>
+
+    </nav>
+    <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2023       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design">Certified in RWD</a></p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html" style="text-decoration: none;">
+        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css" style="text-decoration: none;">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+    </a>
     
-        </nav>
-        <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2023</p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html" style="text-decoration: none;">
-            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css" style="text-decoration: none;">
-            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-        </a>
-        
-    </footer>
-    
-    <script>
-    
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    
-        </script>
-        </body>
-    
-    </html>
+</footer>
+
+<script>
+
+document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+
+    </script>
+    </body>
+
+</html>
