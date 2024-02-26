@@ -1,16 +1,64 @@
-body{
-    background-color: #d1c5ac;
-    text-align: center;
-    color: rgb(78, 39, 28);
-    font-family: Helvetica; 
+/* Color Scheme: #D9BF77, #ACD8AA, #7EAB8D, #3E606F, #193441 */
+/* Coolors.co URL: https://coolors.co/your-colors-url */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 100;
+    padding: 0;
+    background-color: #50808E;
+    color: #D2EBFA;
+    max-width: 1600px;
 
 }
-a{
-    color: #500a0a;
+
+header {
     text-align: center;
-    text-decoration: line;
+    padding: 20px;
+    background-color: #3E606F;
+    color: #D2EBFA;
 }
+
+a{
+    color: #cfe5ec;
+    text-align: center;
+}
+
 a:hover{
-    color: #b80f0f;
-    text-decoration: center;
+    color: #16d4e5;
+}
+
+
+header img {
+    height: 150px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+main {
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3E606F;
+}
+
+h2 {
+    color: #D2EBFA;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3E606F;
+    color: #D2EBFA;
+    max-width: 1600px;
+
 }
