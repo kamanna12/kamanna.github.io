@@ -3,13 +3,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 100;
+    margin: 0; /* No margin */
     padding: 0;
     background-color: #50808E;
     color: #D2EBFA;
     max-width: 1600px;
-
 }
+
 
 header {
     text-align: center;
