@@ -35,45 +35,75 @@
         ||
         <a href="project_overview.html">Project Overview</a>
         ||
-        <a href="ClientProject/index.html">Client Project</a> 
+        <a href="ClientProject/index.html">Client Project</a>
+        
     </nav>
     <nav>
         ||
         <a href="stuff/CrApP_Pa&GE.htm">CRAPPY</a>
     </nav>
 </header>
+    <br>
+    <br>
 
-<main>
-    <h1>firstscripts</h1>
+    <form action="process_intro.php" method="post" enctype="multipart/form-data" id="introForm">
+        
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page! Fill out the form below:</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <form id="userForm">
-        <label for="userName">Your Name:</label>
-        <input type="text" id="userName" required>
-        <br>
+        <label for="mascot">Favorite Mascot:</label>
+        <input type="text" id="mascot" name="mascot" required>
 
-        <label for="userFeeling">How are you feeling?</label>
-        <input type="text" id="userFeeling" required>
-        <br>
+        <label for="image">Upload Image (PNG or JPG):</label>
+        <input type="file" id="image" name="image" accept=".png, .jpg" required>
 
-        <button type="button" onclick="submitUserInput()" style="padding: 5px; margin: 5px; width: 100px;">Submit</button>
-        <br>
+        <label for="imageCaption">Image Caption:</label>
+        <input type="text" id="imageCaption" name="imageCaption" required>
 
-        <label for="favoriteNumber">Your Favorite Number (0-10):</label>
-        <input type="number" id="favoriteNumber" min="0" max="10" required>
-        <button type="button" onclick="submitFavoriteNumber()" style="padding: 5px; margin: 5px; width: 150px;">Submit Number</button>
-        <br>
+        <label for="personalBackground">Personal Background:</label>
+        <textarea id="personalBackground" name="personalBackground" rows="4" required></textarea>
 
-        <button type="reset" style="background-color: red; color: white; padding: 5px; margin: 5px; width: 100px;">Reset</button>
+        <label for="professionalBackground">Professional Background:</label>
+        <textarea id="professionalBackground" name="professionalBackground" rows="4" required></textarea>
+
+        <label for="academicBackground">Academic Background:</label>
+        <textarea id="academicBackground" name="academicBackground" rows="4" required></textarea>
+        
+        <label for="webBackground">Background in Web Development:</label>
+        <textarea id="webBackground" name="webBackground" rows="4" required></textarea>
+
+        <label for="compPlatform">Primary Computer Platform:</label>
+        <input type="text" id="compPlatform" name="compPlatform" required>
+
+        <label for="courseInput">Courses Currently Taking:</label>
+        <div id="courses-container">
+            <div class="course-input">
+                <input type="text" id="courseInput" name="courses[]" placeholder="Enter a course..." required>
+            </div>
+        </div>
+        <button type="button" onclick="addCourse()">Add Course</button>
+
+        <label for="funnyThing">Funny Thing?</label>
+        <input type="text" id="funnyThing" name="funnyThing">
+
+        <label for="anythingElse">Anything Else?</label>
+        <input type="text" id="anythingElse" name="anythingElse">
+
+        <label>
+            <input type="checkbox" name="agreement" required>
+            I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+        </label>
+
+        <!-- Add the "Generate Page" button -->
+        <button type="submit">Generate My Intro Page</button>
+        <button class="delete-button" type="reset">Reset Form</button>
+
+        
     </form>
-
-<h3 id="greeting">Welcome!</h3>
-
-    <button onclick="function1()">Promotion Generator</button>
-    <button onclick="function2()">Car Type Generator</button>
-    <button onclick="function3()">Car Year Generator</button>
-    <button onclick="function4()">Car Model Generator</button>
-    <button onclick="function5()">Car Price Generator</button>
-</main>
+    <!-- Create a container for the generated introduction content -->
+    <div id="introContent"></div>
 
 <footer>
     <nav>

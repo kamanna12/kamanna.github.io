@@ -35,46 +35,57 @@
         ||
         <a href="project_overview.html">Project Overview</a>
         ||
-        <a href="ClientProject/index.html">Client Project</a> 
+        <a href="ClientProject/index.html">Client Project</a>
+        
     </nav>
     <nav>
         ||
         <a href="stuff/CrApP_Pa&GE.htm">CRAPPY</a>
     </nav>
 </header>
-
 <main>
-    <h1>firstscripts</h1>
+  <p>Was able to do the Calculator Assignment without the tutorial.</p>
 
-    <form id="userForm">
-        <label for="userName">Your Name:</label>
-        <input type="text" id="userName" required>
-        <br>
+  <div class="calculator">
 
-        <label for="userFeeling">How are you feeling?</label>
-        <input type="text" id="userFeeling" required>
-        <br>
+    <input type="text" id="display" disabled>
+    <div>
+        <button class="btn clear" onclick="clearDisplay()">C</button>
+        <button class="btn clear" onclick="deleteLast()">D</button>
 
-        <button type="button" onclick="submitUserInput()" style="padding: 5px; margin: 5px; width: 100px;">Submit</button>
-        <br>
+    </div>
+    <div>
+      <button class="btn" onclick="appendToDisplay('7')">7</button>
+        <button class="btn" onclick="appendToDisplay('8')">8</button>
+        <button class="btn" onclick="appendToDisplay('9')">9</button>
+        <button class="btn" onclick="appendToDisplay('/')">/</button>
 
-        <label for="favoriteNumber">Your Favorite Number (0-10):</label>
-        <input type="number" id="favoriteNumber" min="0" max="10" required>
-        <button type="button" onclick="submitFavoriteNumber()" style="padding: 5px; margin: 5px; width: 150px;">Submit Number</button>
-        <br>
+    </div>
+    <div>
+        <button class="btn" onclick="appendToDisplay('4')">4</button>
+        <button class="btn" onclick="appendToDisplay('5')">5</button>
+        <button class="btn" onclick="appendToDisplay('6')">6</button>
+        <button class="btn" onclick="appendToDisplay('*')">x</button>
 
-        <button type="reset" style="background-color: red; color: white; padding: 5px; margin: 5px; width: 100px;">Reset</button>
-    </form>
+    </div>
+    <div>
+        <button class="btn" onclick="appendToDisplay('1')">1</button>
+        <button class="btn" onclick="appendToDisplay('2')">2</button>
+        <button class="btn" onclick="appendToDisplay('3')">3</button>
+        <button class="btn" onclick="appendToDisplay('-')">-</button>
 
-<h3 id="greeting">Welcome!</h3>
+    </div>
+    <div>
+        <button class="btn" onclick="appendToDisplay('0')">0</button>
+        <button class="btn" onclick="appendToDisplay('.')">.</button>
+        <button class="btn operator" onclick="calculate()">=</button>
+        <button class="btn" onclick="appendToDisplay('+')">+</button>
 
-    <button onclick="function1()">Promotion Generator</button>
-    <button onclick="function2()">Car Type Generator</button>
-    <button onclick="function3()">Car Year Generator</button>
-    <button onclick="function4()">Car Model Generator</button>
-    <button onclick="function5()">Car Price Generator</button>
+
+    </div>
+</div>
+
 </main>
-
 <footer>
     <nav>
     <a href="https://webpages.charlotte.edu/kamanna/">Charlotte.edu</a>
@@ -90,14 +101,15 @@
     <a href="https://www.linkedin.com/in/kevin-amanna-ab4351252/">LinkedIn</a>
 
     </nav>
-    <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2024       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design">Certified in RWD</a></p>
+    <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2024        <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design">Certified in RWD</a></p>
     <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html" style="text-decoration: none;">
         <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
     </a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css" style="text-decoration: none;">
         <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
     </a>
-    
+    <script src="scripts/defaultscripts/calculator_fcc.js"></script>
+
     <br>
     <button type="button" class="small-button" onclick="document.querySelectorAll('link[rel=stylesheet]').forEach(function(e) { e.setAttribute('href', ''); });">No CSS</button>
     

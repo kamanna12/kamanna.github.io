@@ -1,0 +1,20 @@
+main {
+    font-size: 1em; /* Increase text size by 20% */
+    text-align: left; /* Align paragraphs left */
+}
+
+h1{
+    text-align: center;
+}
+
+figure {
+    text-align: center; /* Aligns the content of the figure center */
+}
+
+img {
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+

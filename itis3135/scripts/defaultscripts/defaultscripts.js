@@ -1,60 +1,69 @@
-function scriptTest() {
-    alert("Hey, my script is running");
+window.onload = function() {
+    displayDateTime();
 }
 
-// Add more functions as needed
-// Function to display current time, day, and date
 function displayDateTime() {
-    const dateTimeElement = document.getElementById('dateTime');
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    const dateTimeString = now.toLocaleDateString('en-US', options);
-    dateTimeElement.textContent = `Today is ${dateTimeString}`;
+    const currentDate = new Date();
+    const formattedDateTime = currentDate.toLocaleString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    });
+
+    const mainElement = document.querySelector('main');
+    const headerElement = document.createElement('h3');
+    headerElement.textContent = `Today is ${formattedDateTime}`;
+    mainElement.insertAdjacentElement('afterbegin', headerElement);
 }
 
-// Function to submit user form and display greeting
-function submitForm() {
+// Function to submit user input and display greeting
+function submitUserInput() {
     const userName = document.getElementById('userName').value;
     const userFeeling = document.getElementById('userFeeling').value;
-    const greetingElement = document.getElementById('greeting');
 
-    // Display greeting
-    greetingElement.textContent = `The Animal Brand Company welcomes you, ${userName}! We're glad you are feeling ${userFeeling}!`;
-
-    // Call function to display favorite polygon information
-    displayFavoritePolygon();
+    document.getElementById('greeting').textContent = `The AmannaInnovation Incorporated welcomes you, ${userName}! We're glad you are doing ${userFeeling}!`;
 }
 
-// Function to display information about the favorite polygon based on the user's number
-function displayFavoritePolygon() {
-    const userNumber = Math.abs(Math.round(parseFloat(document.getElementById('userNumber').value)));
+function submitFavoriteNumber() {
+    const favoriteNumber = Math.round(Math.abs(document.getElementById('favoriteNumber').value));
 
-    const polygonNames = ['Monogon', 'Digon', 'Trigon', 'Tetragon', 'Pentagon', 'Hexagon', 'Heptagon', 'Octagon', 'Nonagon', 'Decagon'];
+    const polygonNames = ["Circle", 'Digon', 'Triangle', 'Quadrilateral', 'Pentagon', 'Hexagon', 'Heptagon', 'Octagon', 'Nonagon', 'Decagon', 'Hendecagon'];
+    const polygonName = polygonNames[favoriteNumber - 1] || 'Unknown';
 
-    const polygonName = polygonNames[userNumber];
-    alert(`Your favorite polygon is a ${polygonName}.`);
+    alert(`A polygon with ${favoriteNumber} sides is called a ${polygonName}.`);
 }
 
-// Animal Brand Company functions
 function function1() {
-    alert("Function 1: Provide an interesting fact about our animal!");
+    var vehicle_promotion = ["Free Tire Rotation", "Free Oil Changes", "0% APR", "$500 OFF for Veterans", "$500 OFF for University Graduates"];
+    var randomIndex = Math.floor(Math.random() * vehicle_promotion.length);
+    alert(vehicle_promotion[randomIndex]);
 }
 
 function function2() {
-    alert("Function 2: Play a fun sound related to our animal!");
+    var vehicles = ["Sedan", "SUV", "Pickup Truck", "Car"];
+    var randomIndex = Math.floor(Math.random() * vehicles.length);
+    alert(vehicles[randomIndex]);
 }
 
+
 function function3() {
-    alert("Function 3: Generate a random joke involving our animal!");
+    var vehicle_year = ["2019", "2020", "2021", "2022","2023","2024"];
+    var randomIndex = Math.floor(Math.random() * vehicle_year.length);
+    alert(vehicle_year[randomIndex]);
 }
 
 function function4() {
-    alert("Function 4: Show a cute image or GIF of our animal!");
+    var vehicle_model = ["Honda Civic", "Honda Accord", "Tesla Model 3", "Toyota Camry","Ford F-150","Ford Mustang"];
+    var randomIndex = Math.floor(Math.random() * vehicle_model.length);
+    alert(vehicle_model[randomIndex]);
 }
 
 function function5() {
-    alert("Function 5: Share a motivational quote inspired by our animal!");
+    var vehicle_price = ["$20,000", "$25,000", "$30,000", "$35,000","$40,000","$45,000"];
+    var randomIndex = Math.floor(Math.random() * vehicle_price.length);
+    alert(vehicle_price[randomIndex]);
 }
-
-// Call the function to display date and time
-displayDateTime();

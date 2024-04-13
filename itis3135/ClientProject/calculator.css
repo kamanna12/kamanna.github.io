@@ -1,0 +1,61 @@
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 10px solid #ee9b00; /* Orange border */
+    background-color: #005f73; /* Blue background */
+    text-align: center; /* Center text horizontally */
+}
+
+#display {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* White background */
+    text-align: right; /* Align text to the right */
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Center text horizontally */
+    background-color: #2480a4; /* Blue button color */
+    color: #fff;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn.operator {
+    background-color: #f0ad4e; /* Operator button color */
+}
+
+.btn.operator:hover {
+    background-color: #ee9b00; /* Darker orange on hover */
+}
+
+.btn.clear {
+    background-color: #d9534f; /* Clear button color */
+}
+
+.btn.clear:hover {
+    background-color: #c9302c; /* Darker red on hover */
+}
+
+/* Clearfix for button alignment */
+#calculator::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -129,3 +129,75 @@ button:hover{
     color: #145851;
 }
 
+
+
+
+
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input[type="text"], textarea, input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+button {
+    width: calc(100% - 20px);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.courses-container input {
+    margin-top: 5px;
+    display: block;
+}
+#introContent {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.delete-button {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px 20px; /* Adjust padding to match the "Add Course" button */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+.small-button {
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    width: 100px; /* Set a specific width */
+}
+
+
+
