@@ -11,16 +11,17 @@
     <header>
         <h1>Frequently Asked Questions</h1>
         <nav>
-            <a href="/ClientProject/index.html">Home</a>
-            <a href="/ClientProject/screening_guidelines.html">Screening Guidelines</a>
-            <a href="/ClientProject/screening_methods.html">Screening Methods</a>
-            <a href="/ClientProject/faq.html">FAQ</a>
-            <a href="/ClientProject/resources.html">Resources</a>
+            <a href="index.html">Home</a>
+            <a href="screening_guidelines.html">Screening Guidelines</a>
+            <a href="screening_methods.html">Screening Methods</a>
+            <a href="faq.html">FAQ's</a>
+            <a href="resources.html">Resources</a>
         </nav>
+        <br>
     </header>
 
     <main>
-        <section>
+        <section class="intro">
             <h2>FAQ's</h2>
             <div class="faq">
                 <h3>What is lung cancer screening?</h3>
@@ -38,31 +39,39 @@
                 <h3>Are there any risks associated with lung cancer screening?</h3>
                 <p>While lung cancer screening can help detect cancer early, it may also lead to false-positive results, unnecessary follow-up tests, and overdiagnosis. It's essential to discuss the benefits and risks with your healthcare provider.</p>
             </div>
-            
+        </section> 
+            <br>
+
             <!-- Additional Questions Form Section -->
+            <section class="intro">
             <h2>Additional Questions</h2>
             <form action="#">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name"><b>Name:</b></label>
+                <input type="email" id="name" name="name" required>
                 
-                <label for="email">Email:</label>
+                <label for="email"><b>Email:</b></label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="question">Your Question:</label>
-                <textarea id="question" name="question" rows="4" required></textarea>
-                
-                <button type="submit">Submit</button>
+                <label for="message"><b>Your Question:</b></label>
+                <textarea id="message" name="question" rows="4" required></textarea>
+
+                <br>
+                <button type="submit"><b>Submit</b></button>
             </form>
-            <br>
+            </section>
+
+        <br>
+
+        <section class="intro">
             <h2>Calculate Cost</h2>
-
+        
             <p>This calculator can calculate costs related to testing and treatments.</p>
-
+            <label for="display" type="text">Total Cost Calculator:</label>
             <div class="calculator">
                 <input type="text" id="display" disabled>
-                <div>
-                    <button class="btn clear" onclick="clearDisplay()">C</button>
-                    <button class="btn clear" onclick="deleteLast()">D</button>
+                <div class="button-container">
+                    <button class="btn clear" onclick="clearDisplay()">Clear All</button>
+                    <button class="btn clear" onclick="deleteLast()">Delete</button>
                 </div>
                 <div>
                     <button class="btn" onclick="appendToDisplay('7')">7</button>
@@ -90,11 +99,11 @@
                 </div>
             </div>
         </section>
+        
     </main>
 
     <footer>
-        <p style="color: #078787;">Page Designed by <a href="../AmannaInnovations.com.html" >AmannaInnovations Inc.</a> &copy; 2024       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" >Certified in RWD</a></p>
-    
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
                 <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
@@ -107,7 +116,12 @@
             </a>            
         </div>
     </footer>
-
+    <script>
+    
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        
+            </script>
     <script src="scripts/calculator_fcc.js"></script>
 </body>
 </html>

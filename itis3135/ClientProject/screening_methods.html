@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screening Methods</title>
+    <title>FAQ - Lung Cancer Screening</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
     <header>
         <h1>Screening Methods</h1>
         <nav>
-            <a href="/ClientProject/index.html">Home</a>
-            <a href="/ClientProject/screening_guidelines.html">Screening Guidelines</a>
-            <a href="/ClientProject/screening_methods.html">Screening Methods</a>
-            <a href="/ClientProject/faq.html">FAQ</a>
-            <a href="/ClientProject/resources.html">Resources</a>
+            <a href="index.html">Home</a>
+            <a href="screening_guidelines.html">Screening Guidelines</a>
+            <a href="screening_methods.html">Screening Methods</a>
+            <a href="faq.html">FAQ's</a>
+            <a href="resources.html">Resources</a>
         </nav>
+        <br>
     </header>
 
     <main>
-        <section>
+        <section class="intro">
             <h2>Screening Methods</h2>
             <p>Tests are used to screen for different types of cancer when a person does not have symptoms. Three screening tests have been studied to see if they decrease the risk of dying from lung cancer.</p>
             <ul>
@@ -43,8 +45,8 @@
                 </li>
             </ul>
         </section>
-
-        <section>
+        <br>
+        <section class="intro">
             <h2>How Screening is Done</h2>
             <p>Screening for lung cancer is done with a yearly low-dose CT scan (LDCT). For this test, you lie on a thin, flat table that slides back and forth inside the hole in the middle of the CT scanner, which is a large, doughnut-shaped machine.</p>
             <p>As the table moves into the opening, an x-ray tube rotates within the scanner, sending out many tiny x-ray beams at precise angles. These beams quickly pass through your body and are detected on the other side of the scanner. A computer then converts these results into detailed images of the lungs.</p>
@@ -56,7 +58,7 @@
     </main>
 
     <footer>
-        <p style="color: #078787;">Page Designed by <a href="../AmannaInnovations.com.html" >AmannaInnovations Inc.</a> &copy; 2024       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" >Certified in RWD</a></p>
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
     
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
@@ -70,6 +72,12 @@
             </a>            
         </div>
     </footer>
+    <script>
+    
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        
+            </script>
 
     <script src="scripts/calculator_fcc.js"></script>
 </body>

@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lung Cancer Screening</title>
+    <title>FAQ - Lung Cancer Screening</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
     <header>
-        <h1>Empowering Lung Health: Research and Awareness for Effective Screening</h1>
+        <h1>Clearing the Air: Understanding Lung Cancer</h1>
         <nav>
-            <a href="/ClientProject/index.html">Home</a>
-            <a href="/ClientProject/screening_guidelines.html">Screening Guidelines</a>
-            <a href="/ClientProject/screening_methods.html">Screening Methods</a>
-            <a href="/ClientProject/faq.html">FAQ</a>
-            <a href="/ClientProject/resources.html">Resources</a>
+            <a href="index.html">Home</a>
+            <a href="screening_guidelines.html">Screening Guidelines</a>
+            <a href="screening_methods.html">Screening Methods</a>
+            <a href="faq.html">FAQ's</a>
+            <a href="resources.html">Resources</a>
         </nav>
+        <br>
     </header>
-
     <main>
         <section class="intro">
-            <h2>Introduction to Lung Cancer Screening</h2>
+            <h2>Welcome!</h2>
             <p>Lung cancer is one of the most common and deadliest cancers worldwide. Lung cancer screening is a crucial tool in early detection and improving survival rates. Here, we provide information on the importance of lung cancer screening, key statistics, and available screening methods.</p>
             <p>According to the American Cancer Society, lung cancer is the leading cause of cancer deaths among both men and women. Early detection through screening can significantly increase the chances of successful treatment.</p>
+        </section>
+        <br>
+            <section class="intro">
+                <h2>Fill out the form below!</h2>
             <p>Fill out the form below to receive updates and important information about lung cancer screening:</p>
             <form id="introductionForm" action="submit.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="firstName">First Name:</label>
+                <input type="email" id="firstName" name="firstName" required><br><br>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="email" id="lastName" name="lastName" required><br><br>
+                
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
+                <input type="email" id="email" name="email" required><br><br>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+                
+                <button type="submit"><b>Submit</b></button>
             </form>
-        </section>
+            
+            </section>
     </main>
 
     <footer>
-        <p style="color: #078787;">Page Designed by <a href="../AmannaInnovations.com.html" >AmannaInnovations Inc.</a> &copy; 2024       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" >Certified in RWD</a></p>
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
     
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
@@ -49,7 +63,12 @@
             </a>            
         </div>
     </footer>
-
+    <script>
+    
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        
+            </script>
     <script src="scripts/calculator_fcc.js"></script>
 </body>
 </html>

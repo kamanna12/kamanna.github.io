@@ -28,30 +28,42 @@
     border-radius: 5px;
     cursor: pointer;
     text-align: center; /* Center text horizontally */
-    background-color: #2480a4; /* Blue button color */
-    color: #fff;
+    background-color: #9ad3ea; /* Blue button color */
+    color: #000000;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #f3f3f3; /* Darker blue on hover */
 }
 
 .btn.operator {
-    background-color: #f0ad4e; /* Operator button color */
+    background-color: #9ad3ea; /* Operator button color */
 }
 
 .btn.operator:hover {
-    background-color: #ee9b00; /* Darker orange on hover */
+    background-color: #fff; /* Darker orange on hover */
 }
 
 .btn.clear {
+    display: block; /* Set display to block */
+    width: auto; /* Set width to auto to span the whole text */
     background-color: #d9534f; /* Clear button color */
 }
 
+
 .btn.clear:hover {
-    background-color: #c9302c; /* Darker red on hover */
+    background-color: #ff0800; /* Darker red on hover */
 }
+.button-container {
+    text-align: center; /* Optional: Align buttons horizontally in the center */
+}
+
+.btn.clear {
+    display: inline-block; /* Set buttons as inline-block to display them horizontally */
+    margin-right: 10px; /* Add margin between buttons */
+}
+
 
 /* Clearfix for button alignment */
 #calculator::after {

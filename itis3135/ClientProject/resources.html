@@ -1,26 +1,27 @@
-<!-- resources.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Lung Cancer Screening</title>
+    <title>FAQ - Lung Cancer Screening</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
     <header>
         <h1>Resources</h1>
         <nav>
-            <a href="/ClientProject/index.html">Home</a>
-            <a href="/ClientProject/screening_guidelines.html">Screening Guidelines</a>
-            <a href="/ClientProject/screening_methods.html">Screening Methods</a>
-            <a href="/ClientProject/faq.html">FAQ</a>
-            <a href="/ClientProject/resources.html">Resources</a>
+            <a href="index.html">Home</a>
+            <a href="screening_guidelines.html">Screening Guidelines</a>
+            <a href="screening_methods.html">Screening Methods</a>
+            <a href="faq.html">FAQ's</a>
+            <a href="resources.html">Resources</a>
         </nav>
+        <br>
     </header>
 
     <main>
-        <section>
+        <section class="intro">
             <h2>Additional Resources and Support Networks</h2>
             <p>Here are some resources to provide further assistance and support:</p>
             <ul>
@@ -36,27 +37,73 @@
                 <li>Lung Cancer Support Groups</li>
             </ul>
         </section>
-
-        <section>
+        <br>
+        <section class="intro">
             <h2>Risk Analysis and Common Factors</h2>
             <p>Fill out the forms below for risk analysis and common factors of getting lung cancer:</p>
             <form id="riskAnalysisForm">
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" required>
-                <label for="smokingYears">Years of Smoking:</label>
-                <input type="number" id="smokingYears" name="smokingYears" required>
-                <label for="familyHistory">Family History of Lung Cancer:</label>
-                <select id="familyHistory" name="familyHistory" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Please select one</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="heightWeight">Height and weight, or body mass index (BMI):</label>
+                <input type="message" id="heightWeight" name="heightWeight" required>
+                
+                <label for="ethnicGroup">Racial or ethnic group:</label>
+                <select id="ethnicGroup" name="ethnicGroup" required>
+                    <option value="" disabled selected>Please select one</option>
+                    <option value="caucasian">Caucasian</option>
+                    <option value="africanAmerican">African American</option>
+                    <option value="asian">Asian</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <label for="educationLevel">Highest level of education obtained:</label>
+                <select id="educationLevel" name="educationLevel" required>
+                    <option value="" disabled selected>Please select one</option>
+                    <option value="highSchool">High School</option>
+                    <option value="associate">Associate Degree</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <label for="smokerType">Type of smoker?</label>
+                <select id="smokerType" name="smokerType" required>
+                    <option value="" disabled selected>Please select one</option>
+                    <option value="current">Current Smoker</option>
+                    <option value="former">Former Smoker</option>
+                    <option value="never">Never Smoked</option>
+                </select>
+                
+                <label for="lungDisease">History of lung disease:</label>
+                <select id="lungDisease" name="lungDisease" required>
+                    <option value="" disabled selected>Please select one</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
-                <button type="submit">Submit</button>
+                
+                <label for="familyHistoryRelative">Family history of lung cancer (must be blood relative), including parents and siblings?</label>
+                <select id="familyHistoryRelative" name="familyHistoryRelative" required>
+                    <option value="" disabled selected>Please select one</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </form>
+            <button type="submit">Submit</button>
+
         </section>
+        
     </main>
 
     <footer>
-        <p style="color: #078787;">Page Designed by <a href="../AmannaInnovations.com.html" >AmannaInnovations Inc.</a> &copy; 2024       <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" >Certified in RWD</a></p>
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
     
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
@@ -70,6 +117,12 @@
             </a>            
         </div>
     </footer>
+    <script>
+    
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        
+            </script>
 
     <script src="scripts/calculator_fcc.js"></script>
 </body>
