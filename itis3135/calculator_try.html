@@ -8,41 +8,10 @@
     <link rel="stylesheet" href="styles/default.css">
   </head>
 <body>
-<header>
-    <h1>Kevin Amanna's Killer Anaconda $$ ITIS 3135</h1>
-    <nav>
-        <a href="./">Home</a>
-        ||
-        <a href="introduction.html">Introduction</a>
-        ||
-        <a href="contract.html">Contract</a>
-        ||
-        <a href="tables.html">Tables</a>
-        ||
-        <a href="forms.html">Forms</a>
-        ||
-        <a href="website_evaluations.html">Website Evaluation</a>
-        ||
-        <a href="firstscripts.html">firstscripts</a>
-        ||
-        <a href="byo_intro.html">BYO Intro Page</a>
-        ||
-        <a href="calculator_try.html">Calculator Try</a>
-        ||
-        <a href="hobby/index.html">Hobby</a>
-        ||
-        <a href="about.html">About Page</a>
-        ||
-        <a href="project_overview.html">Project Overview</a>
-        ||
-        <a href="ClientProject/index.html">Client Project</a>
-        
-    </nav>
-    <nav>
-        ||
-        <a href="stuff/CrApP_Pa&GE.htm">CRAPPY</a>
-    </nav>
-</header>
+    <header>
+        <div data-include="components/header.html"></div>
+    
+        </header>
 <main>
   <p>Was able to do the Calculator Assignment without the tutorial.</p>
 
@@ -87,32 +56,8 @@
 
 </main>
 <footer>
-    <nav>
-    <a href="https://webpages.charlotte.edu/kamanna/">Charlotte.edu</a>
-    ||
-    <a href="https://github.com/kamanna12/kamanna1.github.io">Github</a>
-    ||
-    <a href="https://kamanna12.github.io/itis3135">Github.io</a>
-    ||
-    <a href="https://www.freecodecamp.org/Kamanna">FreeCodeCamp</a>
-    ||
-    <a href="https://www.codecademy.com/profiles/kamanna">Codeacademy</a>
-    ||
-    <a href="https://www.linkedin.com/in/kevin-amanna-ab4351252/">LinkedIn</a>
+    <div data-include="components/footer.html"></div>
 
-    </nav>
-    <p>Page Designed by <a href="AmannaInnovations.com.html">AmannaInnovations Inc.</a> &copy; 2024        <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design">Certified in RWD</a></p>
-    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html" style="text-decoration: none;">
-        <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css" style="text-decoration: none;">
-        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-    </a>
-    <script src="scripts/defaultscripts/calculator_fcc.js"></script>
-
-    <br>
-    <button type="button" class="small-button" onclick="document.querySelectorAll('link[rel=stylesheet]').forEach(function(e) { e.setAttribute('href', ''); });">No CSS</button>
-    
 </footer>
 
 <script>
@@ -121,6 +66,8 @@ document.getElementById("validation_link_html").setAttribute("href", "https://va
 document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
 
     </script>
+    <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
+
     </body>
 
 </html>
