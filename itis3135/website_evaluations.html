@@ -6,7 +6,10 @@
     <title>Kevin Amanna's Killer Anaconda || ITIS3135 Contract</title>
     <link rel="stylesheet" href="styles/calculator.css">
     <link rel="stylesheet" href="styles/default.css">
-  </head>
+    <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+
+
+</head>
 <body>
     <header>
         <div data-include="components/header.html"></div>
@@ -57,11 +60,12 @@
 </footer>
 
 <script>
+    
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
 
-document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-
-    </script>
+        </script>
     <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
 
     </body>

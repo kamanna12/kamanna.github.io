@@ -1,91 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Amanna's Killer Anaconda || ITIS3135 Contract</title>
-    <link rel="stylesheet" href="styles/calculator.css">
-    <link rel="stylesheet" href="styles/default.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Amanna's Killer Anaconda || ITIS3135 BYO-Intro</title>
+  <link rel="stylesheet" href="styles/calculator.css">
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+
+
+  <style>
+    .intro-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 50%;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      padding: 0;
+    }
+    .footer-links li {
+      margin: 0 10px;
+    }
+    .course-input {
+      display: flex;
+      align-items: center;
+    }
+    .course-input input {
+      flex-grow: 1;
+    }
+    .course-input button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
 <body>
-    <header>
-        <div data-include="components/header.html"></div>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  <br>
+  <br>
+  <form id="introForm">
+    <h2>BYO Intro</h2>
+    <h3>Time to BYO Intro page! Fill out the form below:</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" required>
+    <label for="mascot">Favorite Mascot:</label>
+    <input type="text" id="mascot" name="Mascot" required>
+    <label for="image">Upload Image (PNG or JPG):</label>
+    <input type="file" id="image" name="image" accept=".png, .jpg" required>
+    <label for="imageCaption">Image Caption:</label>
+    <input type="text" id="imageCaption" name="imageCaption" required>
+    <label for="personalBackground">Personal Background:</label>
+    <textarea id="personalBackground" name="PersonalBackground" rows="4" required></textarea>
+    <label for="professionalBackground">Professional Background:</label>
+    <textarea id="professionalBackground" name="ProfessionalBackground" rows="4" required></textarea>
+    <label for="academicBackground">Academic Background:</label>
+    <textarea id="academicBackground" name="AcademicBackground" rows="4" required></textarea>
+    <label for="webBackground">Background in Web Development:</label>
+    <textarea id="webBackground" name="WebBackground" rows="4" required></textarea>
+    <label for="compPlatform">Primary Computer Platform:</label>
+    <input type="text" id="compPlatform" name="ComputerPlatform" required>
+    <label for="courseInput">Courses Currently Taking:</label>
+    <div id="courses-container">
+      <div class="course-input">
+        <input type="text" id="courseInput" name="courses[]" placeholder="Enter a course..." required>
+        <button class="delete-button" type="button" onclick="removeCourse(this)">Remove</button>
+      </div>
+    </div>
+    <button type="button" onclick="addCourse()">Add Course</button>
+    <label for="funnyThing">Funny Thing?</label>
+    <input type="text" id="funnyThing" name="funnyThing">
+    <label for="anythingElse">Anything Else?</label>
+    <input type="text" id="anythingElse" name="anythingElse">
+    <label>
+      <input type="checkbox" name="agreement" required> I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+    </label>
+    <button type="button" onclick="generateIntroduction()">Generate My Intro Page</button>
+    <button class="delete-button" type="reset">Reset Form</button>
+  </form>
+  <div id="introContent"></div>
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script>
     
-        </header>
-    <br>
-    <br>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
 
-    <form action="process_intro.php" method="post" enctype="multipart/form-data" id="introForm">
-        
-        <h2>BYO Intro</h2>
-        <h3>Time to BYO Intro page! Fill out the form below:</h3>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    function addCourse() {
+        var coursesContainer = document.getElementById("courses-container");
+        var courseInput = document.createElement("div");
+        courseInput.classList.add("course-input");
+        var courseField = document.createElement("input");
+        courseField.type = "text";
+        courseField.name = "courses[]";
+        courseField.placeholder = "Enter a course...";
+        courseField.required = true;
+        var removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.textContent = "Remove";
+        removeButton.onclick = function() {
+          removeCourse(this);
+        };
+      
+        // Check if the course already exists before adding
+        var courses = document.querySelectorAll('.course-input input[type="text"]');
+        var courseExists = false;
+        courses.forEach(function(existingCourse) {
+          if (existingCourse.value.toLowerCase() === courseField.value.toLowerCase()) {
+            courseExists = true;
+            return;
+          }
+        });
+      
+        if (!courseExists) {
+          courseInput.appendChild(courseField);
+          courseInput.appendChild(removeButton);
+          coursesContainer.appendChild(courseInput);
+        } else {
+          alert("This course already exists in the list.");
+        }
+      }
+      
 
-        <label for="mascot">Favorite Mascot:</label>
-        <input type="text" id="mascot" name="mascot" required>
+    function removeCourse(button) {
+      var courseInput = button.parentNode;
+      courseInput.parentNode.removeChild(courseInput);
+    }
 
-        <label for="image">Upload Image (PNG or JPG):</label>
-        <input type="file" id="image" name="image" accept=".png, .jpg" required>
-
-        <label for="imageCaption">Image Caption:</label>
-        <input type="text" id="imageCaption" name="imageCaption" required>
-
-        <label for="personalBackground">Personal Background:</label>
-        <textarea id="personalBackground" name="personalBackground" rows="4" required></textarea>
-
-        <label for="professionalBackground">Professional Background:</label>
-        <textarea id="professionalBackground" name="professionalBackground" rows="4" required></textarea>
-
-        <label for="academicBackground">Academic Background:</label>
-        <textarea id="academicBackground" name="academicBackground" rows="4" required></textarea>
-        
-        <label for="webBackground">Background in Web Development:</label>
-        <textarea id="webBackground" name="webBackground" rows="4" required></textarea>
-
-        <label for="compPlatform">Primary Computer Platform:</label>
-        <input type="text" id="compPlatform" name="compPlatform" required>
-
-        <label for="courseInput">Courses Currently Taking:</label>
-        <div id="courses-container">
-            <div class="course-input">
-                <input type="text" id="courseInput" name="courses[]" placeholder="Enter a course..." required>
-            </div>
-        </div>
-        <button type="button" onclick="addCourse()">Add Course</button>
-
-        <label for="funnyThing">Funny Thing?</label>
-        <input type="text" id="funnyThing" name="funnyThing">
-
-        <label for="anythingElse">Anything Else?</label>
-        <input type="text" id="anythingElse" name="anythingElse">
-
-        <label>
-            <input type="checkbox" name="agreement" required>
-            I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-        </label>
-
-        <!-- Add the "Generate Page" button -->
-        <button type="submit">Generate My Intro Page</button>
-        <button class="delete-button" type="reset">Reset Form</button>
-
-        
-    </form>
-    <!-- Create a container for the generated introduction content -->
-    <div id="introContent"></div>
-    <footer>
-        <div data-include="components/footer.html"></div>
+    function generateIntroduction() {
+        event.preventDefault(); // Prevent the form from submitting
+        var form = document.getElementById("introForm");
+        var formData = new FormData(form);
     
-    </footer>
+        // Create the introduction content dynamically
+        var introContent = document.getElementById("introContent");
+        introContent.innerHTML = "";
+    
+        var introductionContent = document.createElement("div");
+    
+        // Flag to track if courses heading is added
+        var coursesHeadingAdded = false;
+    
+        // Temporary array to store courses
+        var coursesArray = [];
+    
+        // Append the form data to the introduction content
+        for (var [key, value] of formData.entries()) {
+            if (key === "courses[]") {
+                // Push courses to the temporary array
+                coursesArray.push(value);
+            } else if (key === "image") {
+                // Handle the image
+                var imageElement = document.createElement("img");
+                imageElement.src = URL.createObjectURL(value);
+                imageElement.alt = formData.get("imageCaption");
+                imageElement.classList.add("intro-image");
+                introductionContent.appendChild(imageElement);
+            } else {
+                var sectionHeading = document.createElement("h3");
+                sectionHeading.textContent = `${key.replace(/([A-Z])/g, ' $1').trim()}:`;
+                introductionContent.appendChild(sectionHeading);
+    
+                var sectionContent = document.createElement("p");
+                sectionContent.textContent = value;
+                introductionContent.appendChild(sectionContent);
+            }
+        }
+    
+        // Add courses heading if courses exist
+        if (coursesArray.length > 0) {
+            var coursesHeading = document.createElement("h3");
+            coursesHeading.textContent = "Courses I'm Taking & Why:";
+            introductionContent.appendChild(coursesHeading);
+            coursesHeadingAdded = true;
+    
+            // Create courses list
+            var coursesList = document.createElement("ul");
+            coursesArray.forEach(function(course) {
+                var courseItem = document.createElement("li");
+                courseItem.textContent = course;
+                coursesList.appendChild(courseItem);
+            });
+            introductionContent.appendChild(coursesList);
+        }
+    
+        // Add the "Funny Thing" section if it's not empty
+        var funnyThing = formData.get("funnyThing");
+        if (funnyThing.trim() !== "") {
+            var funnyThingHeading = document.createElement("h3");
+            funnyThingHeading.textContent = "Funny Thing:";
+            introductionContent.appendChild(funnyThingHeading);
+    
+            var funnyThingContent = document.createElement("p");
+            funnyThingContent.textContent = funnyThing;
+            introductionContent.appendChild(funnyThingContent);
+        }
+    
+        // Add the "Anything Else" section if it's not empty
+        var anythingElse = formData.get("anythingElse");
+        if (anythingElse.trim() !== "") {
+            var anythingElseHeading = document.createElement("h3");
+            anythingElseHeading.textContent = "Anything Else:";
+            introductionContent.appendChild(anythingElseHeading);
+    
+            var anythingElseContent = document.createElement("p");
+            anythingElseContent.textContent = anythingElse;
+            introductionContent.appendChild(anythingElseContent);
+        }
+    
+        // Add the footer links
+        var footerLinks = document.createElement("ul");
+        footerLinks.classList.add("footer-links");
 
-<script>
+        introductionContent.appendChild(footerLinks);
+    
+        introContent.appendChild(introductionContent);
+    }
+    
+    
 
-document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-
-    </script>
-    <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
-
-    </body>
-
+  </script>
+  <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
+</body>
 </html>

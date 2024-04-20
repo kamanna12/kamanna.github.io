@@ -1,34 +1,61 @@
-body{
+/* Media Queries */
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Default CSS */
+body {
     background-color: #b2d7cc;
     text-align: center;
     color: #217059;
-    font-family: Helvetica; 
-
+    font-family: Helvetica;
 }
-a{
+
+a {
     color: #22795d;
     text-align: center;
 }
 
-a:hover{
+a:hover {
     color: #145851;
 }
 
-
-main{
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-h2{
+main {
     text-align: center;
 }
 
-li{
+h2 {
+    text-align: center;
+}
+
+li {
     text-align: justify;
 }
-table, th, td {
+
+table,
+th,
+td {
     border: #145851 2px solid;
     text-align: left;
 }
@@ -36,30 +63,31 @@ table, th, td {
 div.container {
     text-align: center;
 }
+
 table {
     table-layout: fixed;
     width: 120%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the table */
     color: rgb(10, 80, 67);
 }
+
 td {
-    width: 25% ;
+    width: 25%;
 }
 
-
-ol.center-list{
+ol.center-list {
     display: table;
     margin-left: auto;
     margin-right: auto;
     list-style-position: inside;
 }
-th { 
-    font-weight: normal; 
+
+th {
+    font-weight: normal;
 }
 
-
-
-form, .box {
+form,
+.box {
     border: 4px solid #333; /* Set border color and width */
     padding: 20px; /* Optional: Add padding inside the border */
     max-width: 800px; /* Optional: Set a maximum width for the form */
@@ -73,11 +101,14 @@ form, .box {
 .figure-caption {
     margin-right: 740px; /* Adjust the margin as needed */
 }
-header, footer {
+
+header,
+footer {
     background-color: #71b8ad;
     color: #285c5c;
     text-align: center;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -97,20 +128,15 @@ nav a:hover {
     background-color: #1e7e7b;
 }
 
-.color-in{
+.color-in {
     background-color: #6bba99;
 }
 
-.color-in2{
+.color-in2 {
     background-color: #84E6BC;
 }
 
-/* styles/default.css */
-
-body {
-    font-family: Arial, sans-serif;
-}
-
+/* Button Styles */
 button {
     background-color: #4CAF50; /* Green */
     color: white;
@@ -125,26 +151,27 @@ button {
     border: 2px solid #4CAF50; /* Green border */
     border-radius: 5px; /* Optional: Add rounded corners */
 }
-button:hover{
+
+button:hover {
     color: #145851;
 }
 
-
-
-
-
-
+/* Form Styles */
 form {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
 }
+
 label {
     display: block;
     margin-top: 10px;
 }
-input[type="text"], textarea, input[type="file"] {
+
+input[type="text"],
+textarea,
+input[type="file"] {
     width: calc(100% - 20px);
     padding: 8px;
     margin-top: 5px;
@@ -152,27 +179,17 @@ input[type="text"], textarea, input[type="file"] {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 textarea {
     resize: vertical;
     height: 100px;
 }
-button {
-    width: calc(100% - 20px);
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-button:hover {
-    background-color: #45a049;
-}
+
 .courses-container input {
     margin-top: 5px;
     display: block;
 }
+
 #introContent {
     margin-top: 20px;
     border: 1px solid #ccc;
@@ -180,6 +197,7 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Delete Button */
 .delete-button {
     color: white;
     background-color: red;
@@ -192,12 +210,11 @@ button:hover {
 .delete-button:hover {
     background-color: darkred;
 }
+
+/* Small Button */
 .small-button {
     border: none;
     padding: 10px 20px; /* Adjust padding as needed */
     border-radius: 5px;
     width: 100px; /* Set a specific width */
 }
-
-
-
