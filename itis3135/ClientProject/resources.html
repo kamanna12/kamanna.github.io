@@ -19,6 +19,8 @@
             <a href="faq.html">FAQ's</a>
             <a href="resources.html">Resources</a>
         </nav>
+        <img src="images/CPLogo.png" alt="Logo" class="logo">
+
         <br>
     </header>
 
@@ -45,7 +47,7 @@
             <p>Fill out the forms below for risk analysis and common factors of getting lung cancer:</p>
             <form id="riskAnalysisForm">
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
+                <input type="number" id="age" name="age" min="0" required>
                 
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender" required>
@@ -53,10 +55,12 @@
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
+                    <option value="nonBinary">Non-Binary</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="genderqueer">Genderqueer</option>
+                    <!-- Add more options as needed -->
                 </select>
                 
-                <label for="heightWeight">Height and weight, or body mass index (BMI):</label>
-                <input type="message" id="heightWeight" name="heightWeight" required>
                 
                 <label for="ethnicGroup">Racial or ethnic group:</label>
                 <select id="ethnicGroup" name="ethnicGroup" required>
@@ -64,8 +68,14 @@
                     <option value="caucasian">Caucasian</option>
                     <option value="africanAmerican">African American</option>
                     <option value="asian">Asian</option>
-                    <!-- Add more options as needed -->
+                    <option value="hispanicLatino">Hispanic or Latino</option>
+                    <option value="nativeAmerican">Native American</option>
+                    <option value="pacificIslander">Pacific Islander</option>
+                    <option value="other">Other</option>
                 </select>
+                <input type="text" id="otherEthnicGroup" name="otherEthnicGroup" placeholder="Please specify" style="display: none;">
+                
+                    <!-- Add more options as needed -->
                 
                 <label for="educationLevel">Highest level of education obtained:</label>
                 <select id="educationLevel" name="educationLevel" required>
@@ -73,8 +83,13 @@
                     <option value="highSchool">High School</option>
                     <option value="associate">Associate Degree</option>
                     <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="doctorate">Doctorate or Professional Degree</option>
+                    <option value="someCollege">Some College, No Degree</option>
+                    <option value="vocational">Vocational or Trade School</option>
                     <!-- Add more options as needed -->
                 </select>
+                
                 
                 <label for="smokerType">Type of smoker?</label>
                 <select id="smokerType" name="smokerType" required>
@@ -97,10 +112,49 @@
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
+                <br>
+                <br>
+                <button type="submit">Submit</button>
             </form>
-            <button type="submit">Submit</button>
-
         </section>
+        
+        <script>
+            document.getElementById('riskAnalysisForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                // Perform validation here
+                
+                // Example: Check if age is above a certain value
+                var age = parseInt(document.getElementById('age').value);
+                if (age < 18) {
+                    alert('This risk tool is not designed to be used by individuals younger than 18. Please consult with a healthcare provider if you do have concerns.');
+                    return;
+                }
+                
+                var smokerType = document.getElementById('smokerType').value;
+                if (smokerType === 'current') {
+                    alert('As a current smoker, you are at risk of lung complications. Please consult with a healthcare provider.');
+                    // You can redirect to support resources or display them in the page
+                    // Example: window.location.href = 'support.html';
+                    return;
+                } else if (smokerType === 'former') {
+                    alert('As a former smoker, you are still at risk of lung complications. Consider consulting with a healthcare provider for next steps.');
+                    // You can redirect to support resources or display them in the page
+                    // Example: window.location.href = 'support.html';
+                    return;
+                } else {
+                    alert('You are not at risk of lung complications. However, it is important to maintain a healthy lifestyle.');
+                    return;
+                }
+                
+                // If all validation passes, you can submit the form programmatically
+                // For example:
+                this.submit();
+            });
+        </script>
+        
+        
+        
         
     </main>
 
@@ -120,11 +174,9 @@
         </div>
     </footer>
     <script>
-    
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        
-            </script>
+    </script>
 
     <script src="scripts/calculator_fcc.js"></script>
 </body>

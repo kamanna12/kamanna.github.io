@@ -19,6 +19,8 @@
             <a href="faq.html">FAQ's</a>
             <a href="resources.html">Resources</a>
         </nav>
+        <img src="images/CPLogo.png" alt="Logo" class="logo">
+
         <br>
     </header>
     <main>
@@ -30,10 +32,10 @@
         </section>
         
         <br>
-            <section class="intro">
-                <h2>Fill out the form below!</h2>
+        <section class="intro">
+            <h2>Fill out the form below!</h2>
             <p>Fill out the form below to receive updates and important information about lung cancer screening:</p>
-            <form id="introductionForm" action="submit.php" method="post" class="w3-container">
+            <form id="introductionForm" action="submit.php" method="post" class="w3-container" onsubmit="handleSubmit(event)">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required class="w3-input"><br>
                 
@@ -48,8 +50,24 @@
                 
                 <button type="submit" class="w3-button w3-black w3-padding-large">Submit</button>
             </form>
-            
-            </section>
+        </section>
+        
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                // Get form data
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                
+                // Display thank you message
+                var thankYouMessage = document.createElement('p');
+                thankYouMessage.textContent = 'Thank you, ' + firstName + ' ' + lastName + ', for submitting the form!';
+                document.getElementById('introductionForm').appendChild(thankYouMessage);
+            }
+        </script>
+        
+        
     </main>
 
     <footer>

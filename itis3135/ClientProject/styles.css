@@ -12,6 +12,12 @@ header {
     padding: 20px 0; /* Add padding to top and bottom */
 }
 
+.logo {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* To maintain aspect ratio */
+    display: block; /* Ensure it's a block-level element */
+    margin: 0 auto; /* Center horizontally */
+}
 
 
 head{
@@ -175,4 +181,3 @@ body {
     font-family: "Courier New", monospace;
     font-weight: bold;
 }
-

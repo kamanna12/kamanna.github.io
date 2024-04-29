@@ -6,6 +6,8 @@
     <title>FAQ - Lung Cancer Screening</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="screening_methods.css">
+
 
 </head>
 <body>
@@ -18,6 +20,8 @@
             <a href="faq.html">FAQ's</a>
             <a href="resources.html">Resources</a>
         </nav>
+        <img src="images/CPLogo.png" alt="Logo" class="logo">
+
         <br>
     </header>
 
@@ -27,25 +31,75 @@
             <p>Tests are used to screen for different types of cancer when a person does not have symptoms. Three screening tests have been studied to see if they decrease the risk of dying from lung cancer.</p>
             <ul>
                 <li>
-                    <h3>Low-dose Computed Tomography (LDCT)</h3>
+                    <h3><strong><u>Low-dose Computed Tomography (LDCT)</u></strong></h3>
                     <p>A procedure that uses low-dose radiation to make a series of very detailed pictures of areas inside the body using an x-ray machine that scans the body in a spiral path. This procedure is also called spiral scan or helical scan.</p>
                     <p><strong>Pros:</strong> Effective at finding early-stage lung cancer.</p>
                     <p><strong>Cons:</strong> False-positive results may lead to unnecessary invasive procedures, overdiagnosis of some lung cancers.</p>
                 </li>
                 <li>
-                    <h3>Chest X-ray</h3>
+                    <h3><strong><u>Chest X-ray</u></strong></h3>
                     <p>An x-ray of the organs and bones inside the chest.</p>
                     <p><strong>Pros:</strong> Simple and non-invasive.</p>
                     <p><strong>Cons:</strong> Less effective at detecting early-stage lung cancer compared to LDCT, may result in false-negative and false-positive results.</p>
                 </li>
                 <li>
-                    <h3>Sputum Cytology</h3>
+                    <h3><strong><u>Sputum Cytology</u></strong></h3>
                     <p>A procedure in which a sample of sputum (mucus that is coughed up from the lungs) is viewed under a microscope to check for cancer cells.</p>
                     <p><strong>Pros:</strong> Non-invasive.</p>
                     <p><strong>Cons:</strong> Less effective than LDCT at detecting early-stage lung cancer, may result in false-negative and false-positive results.</p>
                 </li>
             </ul>
         </section>
+        <br>
+        <div id="scoped-section">
+            <section class="intro">
+                <h2><strong>Images of Screening Methods:</strong></h2>
+                
+            <br>
+                <div class="w3-content w3-section slideshow-container" style="justify-content: center;">
+                    <!-- Your content here -->
+                    <div class="carousel-caption"></div>
+                    <button class="prev" onclick="plusSlides(-1)">❮ Prev</button>
+                    <img class="mySlides w3-animate-fading" src="images/SputuumCytology.png" alt="Sputum Cytology" style="width:100%">
+                    <button class="next" onclick="plusSlides(1)">Next ❯</button>
+                    <img class="mySlides w3-animate-fading" src="images/ldct.png" alt="Low-dose Computed Tomography (LDCT)" style="width:100%">
+                    <img class="mySlides w3-animate-fading" src="images/chestxray.png" alt="Chest X-ray" style="width:100%">
+                </div>
+            </section>
+        
+            <!-- JavaScript code for the carousel -->
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+        
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+        
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+        
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var captionDiv = document.querySelector('.carousel-caption');
+                    var captions = ["Sputum Cytology", "Low-dose Computed Tomography (LDCT)", "Chest X-ray"];
+        
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    captionDiv.innerHTML = "<p>" + captions[slideIndex - 1] + "</p>";
+                }
+            </script>
+        </div>
+        
+        
+        
+
         <br>
         <section class="intro">
             <h2>How Screening is Done</h2>
