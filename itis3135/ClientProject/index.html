@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="calculator.css">
 </head>
+
 <body>
+    <!-- Added resources section-->
     <header>
         <h1>Clearing the Air: Understanding Lung Cancer</h1>
 
@@ -23,74 +26,73 @@
 
         <br>
     </header>
+
     <main>
+        <!-- Added resources section-->
         <section class="intro">
             <h2>Welcome!</h2>
-            <p>Lung cancer is one of the most common and deadliest cancers worldwide. Lung cancer screening is a crucial tool in early detection and improving survival rates. Here, we provide information on the importance of lung cancer screening, key statistics, and available screening methods.</p>
-            <p>According to the American Cancer Society, lung cancer is the leading cause of cancer deaths among both men and women. Early detection through screening can significantly increase the chances of successful treatment.</p>
+            <p>Lung cancer is one of the most common and deadliest cancers worldwide. Lung cancer screening is a crucial
+                tool in early detection and improving survival rates. Here, we provide information on the importance of
+                lung cancer screening, key statistics, and available screening methods.</p>
+            <p>According to the American Cancer Society, lung cancer is the leading cause of cancer deaths among both
+                men and women. Early detection through screening can significantly increase the chances of successful
+                treatment.</p>
 
         </section>
-        
+
         <br>
+        <!-- Added information form-->
         <section class="intro">
             <h2>Fill out the form below!</h2>
             <p>Fill out the form below to receive updates and important information about lung cancer screening:</p>
-            <form id="introductionForm" action="submit.php" method="post" class="w3-container" onsubmit="handleSubmit(event)">
+            <form id="introductionForm" action="submit.php" method="post" class="w3-container"
+                onsubmit="handleSubmit(event)">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required class="w3-input"><br>
-                
+
                 <label for="lastName">Last Name:</label>
                 <input type="text" id="lastName" name="lastName" required class="w3-input"><br>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required class="w3-input"><br>
-            
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required class="w3-input"></textarea><br>
-                
+
                 <button type="submit" class="w3-button w3-black w3-padding-large">Submit</button>
             </form>
         </section>
-        
-        <script>
-            function handleSubmit(event) {
-                event.preventDefault(); // Prevent form submission
-                
-                // Get form data
-                var firstName = document.getElementById('firstName').value;
-                var lastName = document.getElementById('lastName').value;
-                
-                // Display thank you message
-                var thankYouMessage = document.createElement('p');
-                thankYouMessage.textContent = 'Thank you, ' + firstName + ' ' + lastName + ', for submitting the form!';
-                document.getElementById('introductionForm').appendChild(thankYouMessage);
-            }
-        </script>
-        
-        
     </main>
 
     <footer>
-        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
-    
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text">AmannaInnovations Inc.</a>&copy; 2024</p>
+
+
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
             </a>
             <a href="#" id="validation_link_css" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!">
             </a>
-            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/ClientProject/" id="validation_link_wcag" target="_blank" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png" alt="WCAG Validity">
-            </a>            
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/ClientProject/"
+                id="validation_link_wcag" target="_blank" style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png"
+                    alt="WCAG Validity">
+            </a>
         </div>
     </footer>
     <script>
-    
+
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        
-            </script>
+
+    </script>
     <script src="scripts/calculator_fcc.js"></script>
+    <script src="scripts/index.js"></script>
+
 </body>
+
 </html>

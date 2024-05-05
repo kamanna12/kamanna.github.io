@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,69 +11,70 @@
 
 
 </head>
+
 <body>
     <header>
         <div data-include="components/header.html"></div>
-    
-        </header>
-<main>
-  <p>Was able to do the Calculator Assignment without the tutorial.</p>
 
-  <div class="calculator">
+    </header>
+    <main>
+        <p>Was able to do the Calculator Assignment without the tutorial.</p>
 
-    <input type="text" id="display" disabled>
-    <div>
-        <button class="btn clear" onclick="clearDisplay()">C</button>
-        <button class="btn clear" onclick="deleteLast()">D</button>
+        <div class="calculator">
 
-    </div>
-    <div>
-      <button class="btn" onclick="appendToDisplay('7')">7</button>
-        <button class="btn" onclick="appendToDisplay('8')">8</button>
-        <button class="btn" onclick="appendToDisplay('9')">9</button>
-        <button class="btn" onclick="appendToDisplay('/')">/</button>
+            <input type="text" id="display" disabled>
+            <div>
+                <button class="btn clear" onclick="clearDisplay()">C</button>
+                <button class="btn clear" onclick="deleteLast()">D</button>
 
-    </div>
-    <div>
-        <button class="btn" onclick="appendToDisplay('4')">4</button>
-        <button class="btn" onclick="appendToDisplay('5')">5</button>
-        <button class="btn" onclick="appendToDisplay('6')">6</button>
-        <button class="btn" onclick="appendToDisplay('*')">x</button>
+            </div>
+            <div>
+                <button class="btn" onclick="appendToDisplay('7')">7</button>
+                <button class="btn" onclick="appendToDisplay('8')">8</button>
+                <button class="btn" onclick="appendToDisplay('9')">9</button>
+                <button class="btn" onclick="appendToDisplay('/')">/</button>
 
-    </div>
-    <div>
-        <button class="btn" onclick="appendToDisplay('1')">1</button>
-        <button class="btn" onclick="appendToDisplay('2')">2</button>
-        <button class="btn" onclick="appendToDisplay('3')">3</button>
-        <button class="btn" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div>
+                <button class="btn" onclick="appendToDisplay('4')">4</button>
+                <button class="btn" onclick="appendToDisplay('5')">5</button>
+                <button class="btn" onclick="appendToDisplay('6')">6</button>
+                <button class="btn" onclick="appendToDisplay('*')">x</button>
 
-    </div>
-    <div>
-        <button class="btn" onclick="appendToDisplay('0')">0</button>
-        <button class="btn" onclick="appendToDisplay('.')">.</button>
-        <button class="btn operator" onclick="calculate()">=</button>
-        <button class="btn" onclick="appendToDisplay('+')">+</button>
+            </div>
+            <div>
+                <button class="btn" onclick="appendToDisplay('1')">1</button>
+                <button class="btn" onclick="appendToDisplay('2')">2</button>
+                <button class="btn" onclick="appendToDisplay('3')">3</button>
+                <button class="btn" onclick="appendToDisplay('-')">-</button>
+
+            </div>
+            <div>
+                <button class="btn" onclick="appendToDisplay('0')">0</button>
+                <button class="btn" onclick="appendToDisplay('.')">.</button>
+                <button class="btn operator" onclick="calculate()">=</button>
+                <button class="btn" onclick="appendToDisplay('+')">+</button>
 
 
-    </div>
-</div>
+            </div>
+        </div>
 
-</main>
-<footer>
-    <div data-include="components/footer.html"></div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
 
-</footer>
+    </footer>
 
-<script>
-    
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
+    <script>
 
-        </script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
+
+    </script>
     <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
     <script src="scripts/defaultscripts/calculator_fcc.js"></script>
 
-    </body>
+</body>
 
 </html>

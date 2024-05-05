@@ -9,18 +9,19 @@ header {
     background-color: #005f73;
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Add padding to top and bottom */
+    padding: 20px 0;
+    /* Add padding to top and bottom */
 }
 
 .logo {
-    width: 300px; /* Adjust width as needed */
-    height: auto; /* To maintain aspect ratio */
-    display: block; /* Ensure it's a block-level element */
-    margin: 0 auto; /* Center horizontally */
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 
-head{
+head {
     background-color: #005f73;
     color: #fff;
     text-align: center;
@@ -31,13 +32,13 @@ header h1 {
 }
 
 nav {
-    background-color: #005f73; /* Set the background color to white */
+    background-color: #005f73;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0px; /* Increase the font size */
+    font-size: 0px;
 }
 
 nav a:hover {
@@ -50,12 +51,12 @@ main {
 
 h2 {
     color: #457b9d;
-    font-size: 24px; /* Increase the font size */
+    font-size: 24px;
 }
 
 .faq h3 {
     color: #457b9d;
-    font-size: 22px; /* Increase the font size */
+    font-size: 22px;
 }
 
 .intro {
@@ -73,21 +74,22 @@ form label {
 
 form input[type="text"],
 form textarea {
-    width: calc(100% - 20px); /* Adjust width to leave some space for padding */
+    width: calc(100% - 20px);
     padding: 10px;
-    margin: 0 auto 20px auto; /* Center the input/textarea and add bottom margin */
+    margin: 0 auto 20px auto;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 #message {
     width: 30%;
-    height: 150px; /* Adjust height as needed */
+    height: 150px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: vertical; /* Allows vertical resizing */
-    font-family: Arial, sans-serif; /* Example font family */
+    resize: vertical;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -95,19 +97,19 @@ form button {
     background-color: #ffbf00;
     border-radius: 5px;
     font-size: 16px;
-    display: inline-block; /* Set display to inline-block */
-    padding: 10px 20px; /* Add padding to the button */
+    display: inline-block;
+    padding: 10px 20px;
 }
 
 form button:hover {
-    background-color: #ffa600; /* Change background color on hover */
+    background-color: #ffa600;
 }
 
 footer {
     background-color: #005f73;
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Add padding to top and bottom */
+    padding: 20px 0;
     font-size: 20px;
 }
 
@@ -128,43 +130,45 @@ footer a {
 .validation-buttons a {
     margin-right: 10px;
 }
-nav {
-    background-color: #005f73; /* Set the background color to white */
-}
-
-nav a {
-    color: #fff; /* Change the text color to the desired color */
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px; /* Add padding to create space around the link text */
-    border-radius: 5px; /* Add rounded corners to the link */
-    font-size: 16px; /* Increase the font size */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Add transition for smooth effect */
-}
-
-nav a:hover {
-    color: #fff; /* Change the text color to white */
-    background-color: #03a2c2; /* Change the background color to the desired blue */
-}
 
 nav {
-    background-color: #005f73; /* Set the background color to dark blue */
+    background-color: #005f73;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
-    padding: 5px 10px; /* Add padding to create space around the link text */
-    border-radius: 5px; /* Add rounded corners to the link */
-    font-size: 24px; /* Increase the font size */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Add transition for smooth effect */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-p{
+nav a:hover {
+    color: #fff;
+    background-color: #03a2c2;
+}
+
+nav {
+    background-color: #005f73;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+p {
     font-size: 23px;
 }
-ul{
+
+ul {
     font-size: 23px;
 }
 
@@ -172,7 +176,7 @@ ul{
     color: white;
 }
 
-h2{
+h2 {
     font-size: 35px;
 
 }

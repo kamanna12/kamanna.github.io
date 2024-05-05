@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
 
 
 </head>
+
 <body>
     <header>
+        <!-- Added Screening Methods section-->
         <h1>Screening Methods</h1>
         <nav>
             <a href="index.html">Home</a>
@@ -28,112 +31,116 @@
     <main>
         <section class="intro">
             <h2>Screening Methods</h2>
-            <p>Tests are used to screen for different types of cancer when a person does not have symptoms. Three screening tests have been studied to see if they decrease the risk of dying from lung cancer.</p>
+            <!-- Added screening methods Recommendations section-->
+            <p>Tests are used to screen for different types of cancer when a person does not have symptoms. Three
+                screening tests have been studied to see if they decrease the risk of dying from lung cancer.</p>
             <ul>
                 <li>
+                    <!-- Added Low-dose Computed Tomography (LDCT) section-->
                     <h3><strong><u>Low-dose Computed Tomography (LDCT)</u></strong></h3>
-                    <p>A procedure that uses low-dose radiation to make a series of very detailed pictures of areas inside the body using an x-ray machine that scans the body in a spiral path. This procedure is also called spiral scan or helical scan.</p>
+                    <p>A procedure that uses low-dose radiation to make a series of very detailed pictures of areas
+                        inside the body using an x-ray machine that scans the body in a spiral path. This procedure is
+                        also called spiral scan or helical scan.</p>
                     <p><strong>Pros:</strong> Effective at finding early-stage lung cancer.</p>
-                    <p><strong>Cons:</strong> False-positive results may lead to unnecessary invasive procedures, overdiagnosis of some lung cancers.</p>
+                    <p><strong>Cons:</strong> False-positive results may lead to unnecessary invasive procedures,
+                        overdiagnosis of some lung cancers.</p>
                 </li>
                 <li>
+                    <!-- Added Chest X-ray section-->
                     <h3><strong><u>Chest X-ray</u></strong></h3>
                     <p>An x-ray of the organs and bones inside the chest.</p>
                     <p><strong>Pros:</strong> Simple and non-invasive.</p>
-                    <p><strong>Cons:</strong> Less effective at detecting early-stage lung cancer compared to LDCT, may result in false-negative and false-positive results.</p>
+                    <p><strong>Cons:</strong> Less effective at detecting early-stage lung cancer compared to LDCT, may
+                        result in false-negative and false-positive results.</p>
                 </li>
                 <li>
+                    <!-- Added Sputum Cytology section-->
                     <h3><strong><u>Sputum Cytology</u></strong></h3>
-                    <p>A procedure in which a sample of sputum (mucus that is coughed up from the lungs) is viewed under a microscope to check for cancer cells.</p>
+                    <p>A procedure in which a sample of sputum (mucus that is coughed up from the lungs) is viewed under
+                        a microscope to check for cancer cells.</p>
                     <p><strong>Pros:</strong> Non-invasive.</p>
-                    <p><strong>Cons:</strong> Less effective than LDCT at detecting early-stage lung cancer, may result in false-negative and false-positive results.</p>
+                    <p><strong>Cons:</strong> Less effective than LDCT at detecting early-stage lung cancer, may result
+                        in false-negative and false-positive results.</p>
                 </li>
             </ul>
         </section>
         <br>
         <div id="scoped-section">
             <section class="intro">
+                <!-- Added Images of Screening Methods section-->
                 <h2><strong>Images of Screening Methods:</strong></h2>
-                
-            <br>
+
+                <br>
+                <!-- Added Slideshow of Screening Methods section-->
                 <div class="w3-content w3-section slideshow-container" style="justify-content: center;">
-                    <!-- Your content here -->
                     <div class="carousel-caption"></div>
                     <button class="prev" onclick="plusSlides(-1)">❮ Prev</button>
-                    <img class="mySlides w3-animate-fading" src="images/SputuumCytology.png" alt="Sputum Cytology" style="width:100%">
+                    <img class="mySlides w3-animate-fading" src="images/SputuumCytology.png" alt="Sputum Cytology"
+                        style="width:100%">
                     <button class="next" onclick="plusSlides(1)">Next ❯</button>
-                    <img class="mySlides w3-animate-fading" src="images/ldct.png" alt="Low-dose Computed Tomography (LDCT)" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="images/chestxray.png" alt="Chest X-ray" style="width:100%">
+                    <img class="mySlides w3-animate-fading" src="images/ldct.png"
+                        alt="Low-dose Computed Tomography (LDCT)" style="width:100%">
+                    <img class="mySlides w3-animate-fading" src="images/chestxray.png" alt="Chest X-ray"
+                        style="width:100%">
                 </div>
             </section>
-        
-            <!-- JavaScript code for the carousel -->
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-        
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-        
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-        
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var captionDiv = document.querySelector('.carousel-caption');
-                    var captions = ["Sputum Cytology", "Low-dose Computed Tomography (LDCT)", "Chest X-ray"];
-        
-                    if (n > slides.length) {slideIndex = 1}    
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    slides[slideIndex-1].style.display = "block";  
-                    captionDiv.innerHTML = "<p>" + captions[slideIndex - 1] + "</p>";
-                }
-            </script>
         </div>
-        
-        
-        
+
+
+
 
         <br>
         <section class="intro">
+            <!-- Added How Screening is Done section-->
             <h2>How Screening is Done</h2>
-            <p>Screening for lung cancer is done with a yearly low-dose CT scan (LDCT). For this test, you lie on a thin, flat table that slides back and forth inside the hole in the middle of the CT scanner, which is a large, doughnut-shaped machine.</p>
-            <p>As the table moves into the opening, an x-ray tube rotates within the scanner, sending out many tiny x-ray beams at precise angles. These beams quickly pass through your body and are detected on the other side of the scanner. A computer then converts these results into detailed images of the lungs.</p>
-            <p>An LDCT scan is painless and only takes a few minutes, although the entire visit (including getting you ready and into place on the table) can take up to half an hour. You don’t need to swallow anything or get any type of injection before this type of CT scan. LDCT does expose you to a small amount of radiation, although it is less than that from a standard CT scan.</p>
+            <p>Screening for lung cancer is done with a yearly low-dose CT scan (LDCT). For this test, you lie on a
+                thin, flat table that slides back and forth inside the hole in the middle of the CT scanner, which is a
+                large, doughnut-shaped machine.</p>
+            <p>As the table moves into the opening, an x-ray tube rotates within the scanner, sending out many tiny
+                x-ray beams at precise angles. These beams quickly pass through your body and are detected on the other
+                side of the scanner. A computer then converts these results into detailed images of the lungs.</p>
+            <p>An LDCT scan is painless and only takes a few minutes, although the entire visit (including getting you
+                ready and into place on the table) can take up to half an hour. You don’t need to swallow anything or
+                get any type of injection before this type of CT scan. LDCT does expose you to a small amount of
+                radiation, although it is less than that from a standard CT scan.</p>
             <p>To learn more about CT scans and what getting one is like, see CT Scan for Cancer.</p>
-            <p>If something abnormal is found during screening, more CT scans or other tests will be needed to be sure. Some of these tests are described in Tests for Lung Cancer.</p>
-            <p>CT scans of the lungs can also sometimes show problems in other organs near the lungs. Your doctor will discuss any such findings with you if they are found.</p>
+            <p>If something abnormal is found during screening, more CT scans or other tests will be needed to be sure.
+                Some of these tests are described in Tests for Lung Cancer.</p>
+            <p>CT scans of the lungs can also sometimes show problems in other organs near the lungs. Your doctor will
+                discuss any such findings with you if they are found.</p>
         </section>
     </main>
 
     <footer>
-        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text"><u>AmannaInnovations Inc.</u></a> &copy; 2024 <a href="https://www.freecodecamp.org/certification/Kamanna/responsive-web-design" class="white-text" ><u>Certified in RWD</u></a></p>    
-    
+        <p>Page Designed by <a href="../AmannaInnovations.com.html" class="white-text">AmannaInnovations Inc.</a>&copy; 2024</p>
+
+
         <div class="validation-buttons">
             <a href="#" id="validation_link_html" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
             </a>
             <a href="#" id="validation_link_css" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!">
             </a>
-            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/ClientProject/" id="validation_link_wcag" target="_blank" style="text-decoration: none;">
-                <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png" alt="WCAG Validity">
-            </a>            
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/ClientProject/"
+                id="validation_link_wcag" target="_blank" style="text-decoration: none;">
+                <img style="border:0;width:88px;height:31px" src="images/button_validation_wcag.png"
+                    alt="WCAG Validity">
+            </a>
         </div>
     </footer>
     <script>
-    
+
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        
-            </script>
+
+    </script>
 
     <script src="scripts/calculator_fcc.js"></script>
+    <script src="scripts/screening_methods.js"></script>
+
 </body>
+
 </html>

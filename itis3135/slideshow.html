@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/slideshow.css">
     <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
 </head>
+
 <body>
     <header>
         <div data-include="components/header.html"></div>
@@ -79,32 +81,43 @@
         <br>
         <!-- The thumbnail list -->
         <div class="thumbnail-list">
-            <a href="#" onclick="currentSlide(1)"><img src="images/img1.png" alt="Image 1: Killer Anaconda" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(2)"><img src="images/img2.png" alt="Image 2: Anaconda Habitat" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(3)"><img src="images/img3.png" alt="Image 3: Anaconda Prey" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(4)"><img src="images/img4.png" alt="Image 4: Anaconda Hunting" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(5)"><img src="images/img5.png" alt="Image 5: Anaconda Coiling" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(6)"><img src="images/img6.png" alt="Image 6: Anaconda Feeding" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(7)"><img src="images/img7.png" alt="Image 7: Anaconda Babies" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(8)"><img src="images/img8.png" alt="Image 8: Anaconda Shedding" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(9)"><img src="images/img9.png" alt="Image 9: Anaconda Anatomy" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(10)"><img src="images/img10.png" alt="Image 10: Anaconda Venom" class="thumbnail"></a>
-            <a href="#" onclick="currentSlide(11)"><img src="images/img11.png" alt="Image 11: Anaconda Conservation" class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(1)"><img src="images/img1.png" alt="Image 1: Killer Anaconda"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(2)"><img src="images/img2.png" alt="Image 2: Anaconda Habitat"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(3)"><img src="images/img3.png" alt="Image 3: Anaconda Prey"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(4)"><img src="images/img4.png" alt="Image 4: Anaconda Hunting"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(5)"><img src="images/img5.png" alt="Image 5: Anaconda Coiling"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(6)"><img src="images/img6.png" alt="Image 6: Anaconda Feeding"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(7)"><img src="images/img7.png" alt="Image 7: Anaconda Babies"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(8)"><img src="images/img8.png" alt="Image 8: Anaconda Shedding"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(9)"><img src="images/img9.png" alt="Image 9: Anaconda Anatomy"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(10)"><img src="images/img10.png" alt="Image 10: Anaconda Venom"
+                    class="thumbnail"></a>
+            <a href="#" onclick="currentSlide(11)"><img src="images/img11.png" alt="Image 11: Anaconda Conservation"
+                    class="thumbnail"></a>
         </div>
         <p>Used Canva AI Image Generator. Prompts Below:</p>
         <p>
-      
-          K - Koala,
-          E - Elephant,
-          V - Volcano,
-          I - Igloo,
-          N - Narwhal
-          A - Apple,
-          M - Mountain,
-          A - Aurora (Northern Lights),
-          N - Night Sky,
-          N - Nectarine,
-          A - Astroid,
+
+            K - Koala,
+            E - Elephant,
+            V - Volcano,
+            I - Igloo,
+            N - Narwhal
+            A - Apple,
+            M - Mountain,
+            A - Aurora (Northern Lights),
+            N - Night Sky,
+            N - Nectarine,
+            A - Astroid,
         </p>
     </main>
     <footer>
@@ -131,18 +144,19 @@
             let i;
             let slides = document.getElementsByClassName("mySlides");
             let thumbnails = document.getElementsByClassName("thumbnail");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             for (i = 0; i < thumbnails.length; i++) {
                 thumbnails[i].classList.remove("active");
             }
-            slides[slideIndex-1].style.display = "block";
-            thumbnails[slideIndex-1].classList.add("active");
+            slides[slideIndex - 1].style.display = "block";
+            thumbnails[slideIndex - 1].classList.add("active");
         }
     </script>
     <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
 </body>
+
 </html>

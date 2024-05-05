@@ -1,30 +1,29 @@
-                /* Styles from w3.css that you want to apply only within this section */
-                /* Add your custom styles here as well */
-                /* Example: */
-                .w3-content {
-                    max-width: 500px;
-                    position: relative; /* Ensure container is positioned relative */
-                }
-        
-                .slideshow-container {
-                    position: relative;
-                }
-        
-                .prev, .next {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    padding: 16px;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    color: white;
-                    border: none;
-                    cursor: pointer;
-                }
-        
-                .prev {
-                    left: 0;
-                }
-        
-                .next {
-                    right: 0;
-                }
+.w3-content {
+    max-width: 500px;
+    position: relative;
+    /* Ensure container is positioned relative */
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

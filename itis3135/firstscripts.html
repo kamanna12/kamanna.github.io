@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,58 +11,62 @@
 
 
 </head>
+
 <body>
     <header>
         <div data-include="components/header.html"></div>
-    
-        </header>
 
-<main>
-    <h1>firstscripts</h1>
+    </header>
 
-    <form id="userForm">
-        <label for="userName">Your Name:</label>
-        <input type="text" id="userName" required>
-        <br>
+    <main>
+        <h1>firstscripts</h1>
 
-        <label for="userFeeling">How are you feeling?</label>
-        <input type="text" id="userFeeling" required>
-        <br>
+        <form id="userForm">
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" required>
+            <br>
 
-        <button type="button" onclick="submitUserInput()" style="padding: 5px; margin: 5px; width: 100px;">Submit</button>
-        <br>
+            <label for="userFeeling">How are you feeling?</label>
+            <input type="text" id="userFeeling" required>
+            <br>
 
-        <label for="favoriteNumber">Your Favorite Number (0-10):</label>
-        <input type="number" id="favoriteNumber" min="0" max="10" required>
-        <button type="button" onclick="submitFavoriteNumber()" style="padding: 5px; margin: 5px; width: 150px;">Submit Number</button>
-        <br>
+            <button type="button" onclick="submitUserInput()"
+                style="padding: 5px; margin: 5px; width: 100px;">Submit</button>
+            <br>
 
-        <button type="reset" style="background-color: red; color: white; padding: 5px; margin: 5px; width: 100px;">Reset</button>
-    </form>
+            <label for="favoriteNumber">Your Favorite Number (0-10):</label>
+            <input type="number" id="favoriteNumber" min="0" max="10" required>
+            <button type="button" onclick="submitFavoriteNumber()"
+                style="padding: 5px; margin: 5px; width: 150px;">Submit Number</button>
+            <br>
 
-<h3 id="greeting">Welcome!</h3>
+            <button type="reset"
+                style="background-color: red; color: white; padding: 5px; margin: 5px; width: 100px;">Reset</button>
+        </form>
 
-    <button onclick="function1()">Promotion Generator</button>
-    <button onclick="function2()">Car Type Generator</button>
-    <button onclick="function3()">Car Year Generator</button>
-    <button onclick="function4()">Car Model Generator</button>
-    <button onclick="function5()">Car Price Generator</button>
-</main>
+        <h3 id="greeting">Welcome!</h3>
 
-<footer>
-    <div data-include="components/footer.html"></div>
+        <button onclick="function1()">Promotion Generator</button>
+        <button onclick="function2()">Car Type Generator</button>
+        <button onclick="function3()">Car Year Generator</button>
+        <button onclick="function4()">Car Model Generator</button>
+        <button onclick="function5()">Car Price Generator</button>
+    </main>
 
-</footer>
+    <footer>
+        <div data-include="components/footer.html"></div>
 
-<script>
-    
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
+    </footer>
 
-        </script>
+    <script>
+
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        document.getElementById("validation_link_disability").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/kamanna/itis3135/");
+
+    </script>
     <script src="scripts/defaultscripts/HTMLInclude.min.js"></script>
 
-    </body>
+</body>
 
 </html>
